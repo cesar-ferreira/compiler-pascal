@@ -204,15 +204,6 @@ public interface PascalFactory extends EFactory
   any_number createany_number();
 
   /**
-   * Returns a new object of class '<em>set</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>set</em>'.
-   * @generated
-   */
-  set createset();
-
-  /**
    * Returns a new object of class '<em>function designator</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -249,15 +240,6 @@ public interface PascalFactory extends EFactory
   repetitive_statement createrepetitive_statement();
 
   /**
-   * Returns a new object of class '<em>while statement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>while statement</em>'.
-   * @generated
-   */
-  while_statement createwhile_statement();
-
-  /**
    * Returns a new object of class '<em>repeat statement</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -265,15 +247,6 @@ public interface PascalFactory extends EFactory
    * @generated
    */
   repeat_statement createrepeat_statement();
-
-  /**
-   * Returns a new object of class '<em>for statement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>for statement</em>'.
-   * @generated
-   */
-  for_statement createfor_statement();
 
   /**
    * Returns a new object of class '<em>constant</em>'.
@@ -445,24 +418,6 @@ public interface PascalFactory extends EFactory
    * @generated
    */
   variable_section createvariable_section();
-
-  /**
-   * Returns a new object of class '<em>record section</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>record section</em>'.
-   * @generated
-   */
-  record_section createrecord_section();
-
-  /**
-   * Returns a new object of class '<em>tag field</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>tag field</em>'.
-   * @generated
-   */
-  tag_field createtag_field();
 
   /**
    * Returns a new object of class '<em>set type</em>'.

@@ -176,11 +176,6 @@ public class PascalAdapterFactory extends AdapterFactoryImpl
         return createany_numberAdapter();
       }
       @Override
-      public Adapter caseset(set object)
-      {
-        return createsetAdapter();
-      }
-      @Override
       public Adapter casefunction_designator(function_designator object)
       {
         return createfunction_designatorAdapter();
@@ -201,19 +196,9 @@ public class PascalAdapterFactory extends AdapterFactoryImpl
         return createrepetitive_statementAdapter();
       }
       @Override
-      public Adapter casewhile_statement(while_statement object)
-      {
-        return createwhile_statementAdapter();
-      }
-      @Override
       public Adapter caserepeat_statement(repeat_statement object)
       {
         return createrepeat_statementAdapter();
-      }
-      @Override
-      public Adapter casefor_statement(for_statement object)
-      {
-        return createfor_statementAdapter();
       }
       @Override
       public Adapter caseconstant(constant object)
@@ -309,16 +294,6 @@ public class PascalAdapterFactory extends AdapterFactoryImpl
       public Adapter casevariable_section(variable_section object)
       {
         return createvariable_sectionAdapter();
-      }
-      @Override
-      public Adapter caserecord_section(record_section object)
-      {
-        return createrecord_sectionAdapter();
-      }
-      @Override
-      public Adapter casetag_field(tag_field object)
-      {
-        return createtag_fieldAdapter();
       }
       @Override
       public Adapter caseset_type(set_type object)
@@ -723,21 +698,6 @@ public class PascalAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.pascal.set <em>set</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.pascal.set
-   * @generated
-   */
-  public Adapter createsetAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.pascal.function_designator <em>function designator</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -798,21 +758,6 @@ public class PascalAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.pascal.while_statement <em>while statement</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.pascal.while_statement
-   * @generated
-   */
-  public Adapter createwhile_statementAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.pascal.repeat_statement <em>repeat statement</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -823,21 +768,6 @@ public class PascalAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createrepeat_statementAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.pascal.for_statement <em>for statement</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.pascal.for_statement
-   * @generated
-   */
-  public Adapter createfor_statementAdapter()
   {
     return null;
   }
@@ -1123,36 +1053,6 @@ public class PascalAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createvariable_sectionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.pascal.record_section <em>record section</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.pascal.record_section
-   * @generated
-   */
-  public Adapter createrecord_sectionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link org.xtext.pascal.tag_field <em>tag field</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.pascal.tag_field
-   * @generated
-   */
-  public Adapter createtag_fieldAdapter()
   {
     return null;
   }

@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.pascal.factor#getVariable <em>Variable</em>}</li>
  *   <li>{@link org.xtext.pascal.factor#getNumber <em>Number</em>}</li>
  *   <li>{@link org.xtext.pascal.factor#getString <em>String</em>}</li>
- *   <li>{@link org.xtext.pascal.factor#getSet <em>Set</em>}</li>
  *   <li>{@link org.xtext.pascal.factor#isNil <em>Nil</em>}</li>
  *   <li>{@link org.xtext.pascal.factor#getBoolean <em>Boolean</em>}</li>
  *   <li>{@link org.xtext.pascal.factor#getFunction <em>Function</em>}</li>
@@ -108,32 +107,6 @@ public interface factor extends EObject
    * @generated
    */
   void setString(String value);
-
-  /**
-   * Returns the value of the '<em><b>Set</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Set</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Set</em>' containment reference.
-   * @see #setSet(set)
-   * @see org.xtext.pascal.PascalPackage#getfactor_Set()
-   * @model containment="true"
-   * @generated
-   */
-  set getSet();
-
-  /**
-   * Sets the value of the '{@link org.xtext.pascal.factor#getSet <em>Set</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Set</em>' containment reference.
-   * @see #getSet()
-   * @generated
-   */
-  void setSet(set value);
 
   /**
    * Returns the value of the '<em><b>Nil</b></em>' attribute.

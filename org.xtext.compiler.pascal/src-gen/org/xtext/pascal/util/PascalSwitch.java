@@ -213,13 +213,6 @@ public class PascalSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PascalPackage.SET:
-      {
-        set set = (set)theEObject;
-        T result = caseset(set);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case PascalPackage.FUNCTION_DESIGNATOR:
       {
         function_designator function_designator = (function_designator)theEObject;
@@ -248,24 +241,10 @@ public class PascalSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PascalPackage.WHILE_STATEMENT:
-      {
-        while_statement while_statement = (while_statement)theEObject;
-        T result = casewhile_statement(while_statement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case PascalPackage.REPEAT_STATEMENT:
       {
         repeat_statement repeat_statement = (repeat_statement)theEObject;
         T result = caserepeat_statement(repeat_statement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.FOR_STATEMENT:
-      {
-        for_statement for_statement = (for_statement)theEObject;
-        T result = casefor_statement(for_statement);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -399,20 +378,6 @@ public class PascalSwitch<T> extends Switch<T>
       {
         variable_section variable_section = (variable_section)theEObject;
         T result = casevariable_section(variable_section);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.RECORD_SECTION:
-      {
-        record_section record_section = (record_section)theEObject;
-        T result = caserecord_section(record_section);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.TAG_FIELD:
-      {
-        tag_field tag_field = (tag_field)theEObject;
-        T result = casetag_field(tag_field);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -854,22 +819,6 @@ public class PascalSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>set</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>set</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseset(set object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>function designator</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -934,22 +883,6 @@ public class PascalSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>while statement</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>while statement</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casewhile_statement(while_statement object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>repeat statement</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -961,22 +894,6 @@ public class PascalSwitch<T> extends Switch<T>
    * @generated
    */
   public T caserepeat_statement(repeat_statement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>for statement</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>for statement</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casefor_statement(for_statement object)
   {
     return null;
   }
@@ -1281,38 +1198,6 @@ public class PascalSwitch<T> extends Switch<T>
    * @generated
    */
   public T casevariable_section(variable_section object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>record section</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>record section</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caserecord_section(record_section object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>tag field</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>tag field</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casetag_field(tag_field object)
   {
     return null;
   }

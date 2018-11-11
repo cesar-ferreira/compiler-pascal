@@ -76,7 +76,7 @@ term:
 ;
 
 factor: 
-	variable=variable | number=number | string=STRING | set=set | nil?="nil" | boolean="true" | boolean="false" | function=function_designator | "(" expression=expression ")" | "not" not=factor	
+	variable=variable | number=number | string=STRING | nil?="nil" | boolean="true" | boolean="false" | function=function_designator | "(" expression=expression ")" | "not" not=factor	
 ;
 
 number:
@@ -95,10 +95,6 @@ signed_number returns any_number:
 	integer=SIGNED_INTEGER_NUMBER | real=SIGNED_REAL_NUMBER
 ;
 
-set:
-	brackets+="[" expressions=expression_list ? brackets+="]"	
-;
-
 function_designator:
 	name=ID "(" expressions=expression_list ? ")"
 ;
@@ -112,20 +108,14 @@ compound_statement:
 ;
 
 repetitive_statement: 
-	whileStmt=while_statement | repeatStmt=repeat_statement | forStmt=for_statement
+	repeatStmt=repeat_statement 
 ;
 
-while_statement:
-	"while" expression=expression "do" statement=statement	
-;
 
 repeat_statement:
 	"repeat" sequence=statement_sequence "until" expression=expression	
 ;
 
-for_statement:
-	"for" assignment=assignment_statement ( "to" | "downto" ) expression=expression "do" statement=statement	
-;
 
 constant:
 	opterator=ADDITION_OPERATOR ? ( name=ID | number=number ) | string=STRING | boolLiteral="true" | boolLiteral="false" | nil="nil"
@@ -201,14 +191,6 @@ variable_identifier_list:
 
 variable_section:
 	identifiers=variable_identifier_list ":" type=type	
-;
-
-record_section:
-	identifiers=identifier_list ":" type=type	
-;
-
-tag_field:
-	name=ID ":" 
 ;
 
 set_type:

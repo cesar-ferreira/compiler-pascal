@@ -33,7 +33,6 @@ import org.xtext.pascal.expression;
 import org.xtext.pascal.expression_list;
 import org.xtext.pascal.factor;
 import org.xtext.pascal.file_type;
-import org.xtext.pascal.for_statement;
 import org.xtext.pascal.formal_parameter_list;
 import org.xtext.pascal.formal_parameter_section;
 import org.xtext.pascal.function_designator;
@@ -50,10 +49,8 @@ import org.xtext.pascal.pointer_type;
 import org.xtext.pascal.procedure_and_function_declaration_part;
 import org.xtext.pascal.program;
 import org.xtext.pascal.program_heading_block;
-import org.xtext.pascal.record_section;
 import org.xtext.pascal.repeat_statement;
 import org.xtext.pascal.repetitive_statement;
-import org.xtext.pascal.set;
 import org.xtext.pascal.set_type;
 import org.xtext.pascal.simple_expression;
 import org.xtext.pascal.simple_statement;
@@ -64,7 +61,6 @@ import org.xtext.pascal.statement_sequence;
 import org.xtext.pascal.structured_statement;
 import org.xtext.pascal.structured_type;
 import org.xtext.pascal.subrange_type;
-import org.xtext.pascal.tag_field;
 import org.xtext.pascal.term;
 import org.xtext.pascal.type;
 import org.xtext.pascal.type_definition;
@@ -78,7 +74,6 @@ import org.xtext.pascal.variable_declaration_part;
 import org.xtext.pascal.variable_identifier_list;
 import org.xtext.pascal.variable_parameter_section;
 import org.xtext.pascal.variable_section;
-import org.xtext.pascal.while_statement;
 import org.xtext.pascal.with_statement;
 import org.xtext.services.PascalGrammarAccess;
 
@@ -177,9 +172,6 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case PascalPackage.FILE_TYPE:
 				sequence_file_type(context, (file_type) semanticObject); 
 				return; 
-			case PascalPackage.FOR_STATEMENT:
-				sequence_for_statement(context, (for_statement) semanticObject); 
-				return; 
 			case PascalPackage.FORMAL_PARAMETER_LIST:
 				sequence_formal_parameter_list(context, (formal_parameter_list) semanticObject); 
 				return; 
@@ -228,17 +220,11 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case PascalPackage.PROGRAM_HEADING_BLOCK:
 				sequence_program_heading_block(context, (program_heading_block) semanticObject); 
 				return; 
-			case PascalPackage.RECORD_SECTION:
-				sequence_record_section(context, (record_section) semanticObject); 
-				return; 
 			case PascalPackage.REPEAT_STATEMENT:
 				sequence_repeat_statement(context, (repeat_statement) semanticObject); 
 				return; 
 			case PascalPackage.REPETITIVE_STATEMENT:
 				sequence_repetitive_statement(context, (repetitive_statement) semanticObject); 
-				return; 
-			case PascalPackage.SET:
-				sequence_set(context, (set) semanticObject); 
 				return; 
 			case PascalPackage.SET_TYPE:
 				sequence_set_type(context, (set_type) semanticObject); 
@@ -269,9 +255,6 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case PascalPackage.SUBRANGE_TYPE:
 				sequence_subrange_type(context, (subrange_type) semanticObject); 
-				return; 
-			case PascalPackage.TAG_FIELD:
-				sequence_tag_field(context, (tag_field) semanticObject); 
 				return; 
 			case PascalPackage.TERM:
 				sequence_term(context, (term) semanticObject); 
@@ -311,9 +294,6 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case PascalPackage.VARIABLE_SECTION:
 				sequence_variable_section(context, (variable_section) semanticObject); 
-				return; 
-			case PascalPackage.WHILE_STATEMENT:
-				sequence_while_statement(context, (while_statement) semanticObject); 
 				return; 
 			case PascalPackage.WITH_STATEMENT:
 				sequence_with_statement(context, (with_statement) semanticObject); 
@@ -543,7 +523,6 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         variable=variable | 
 	 *         number=number | 
 	 *         string=STRING | 
-	 *         set=set | 
 	 *         nil?='nil' | 
 	 *         boolean='true' | 
 	 *         boolean='false' | 
@@ -571,30 +550,6 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getFile_typeAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     for_statement returns for_statement
-	 *
-	 * Constraint:
-	 *     (assignment=assignment_statement expression=expression statement=statement)
-	 */
-	protected void sequence_for_statement(ISerializationContext context, for_statement semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.FOR_STATEMENT__ASSIGNMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.FOR_STATEMENT__ASSIGNMENT));
-			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.FOR_STATEMENT__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.FOR_STATEMENT__EXPRESSION));
-			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.FOR_STATEMENT__STATEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.FOR_STATEMENT__STATEMENT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFor_statementAccess().getAssignmentAssignment_statementParserRuleCall_1_0(), semanticObject.getAssignment());
-		feeder.accept(grammarAccess.getFor_statementAccess().getExpressionExpressionParserRuleCall_3_0(), semanticObject.getExpression());
-		feeder.accept(grammarAccess.getFor_statementAccess().getStatementStatementParserRuleCall_5_0(), semanticObject.getStatement());
 		feeder.finish();
 	}
 	
@@ -897,27 +852,6 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Contexts:
-	 *     record_section returns record_section
-	 *
-	 * Constraint:
-	 *     (identifiers=identifier_list type=type)
-	 */
-	protected void sequence_record_section(ISerializationContext context, record_section semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.RECORD_SECTION__IDENTIFIERS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.RECORD_SECTION__IDENTIFIERS));
-			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.RECORD_SECTION__TYPE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.RECORD_SECTION__TYPE));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getRecord_sectionAccess().getIdentifiersIdentifier_listParserRuleCall_0_0(), semanticObject.getIdentifiers());
-		feeder.accept(grammarAccess.getRecord_sectionAccess().getTypeTypeParserRuleCall_2_0(), semanticObject.getType());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     repeat_statement returns repeat_statement
 	 *
 	 * Constraint:
@@ -942,22 +876,16 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     repetitive_statement returns repetitive_statement
 	 *
 	 * Constraint:
-	 *     (whileStmt=while_statement | repeatStmt=repeat_statement | forStmt=for_statement)
+	 *     repeatStmt=repeat_statement
 	 */
 	protected void sequence_repetitive_statement(ISerializationContext context, repetitive_statement semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     set returns set
-	 *
-	 * Constraint:
-	 *     (brackets+='[' expressions=expression_list? brackets+=']')
-	 */
-	protected void sequence_set(ISerializationContext context, set semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.REPETITIVE_STATEMENT__REPEAT_STMT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.REPETITIVE_STATEMENT__REPEAT_STMT));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRepetitive_statementAccess().getRepeatStmtRepeat_statementParserRuleCall_0(), semanticObject.getRepeatStmt());
+		feeder.finish();
 	}
 	
 	
@@ -1114,24 +1042,6 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 */
 	protected void sequence_subrange_type(ISerializationContext context, subrange_type semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     tag_field returns tag_field
-	 *
-	 * Constraint:
-	 *     name=ID
-	 */
-	protected void sequence_tag_field(ISerializationContext context, tag_field semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.TAG_FIELD__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.TAG_FIELD__NAME));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTag_fieldAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.finish();
 	}
 	
 	
@@ -1344,27 +1254,6 @@ public class PascalSemanticSequencer extends AbstractDelegatingSemanticSequencer
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVariableAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getVariableAccess().getVariableVar_ParserRuleCall_1_0(), semanticObject.getVariable());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     while_statement returns while_statement
-	 *
-	 * Constraint:
-	 *     (expression=expression statement=statement)
-	 */
-	protected void sequence_while_statement(ISerializationContext context, while_statement semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.WHILE_STATEMENT__EXPRESSION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.WHILE_STATEMENT__EXPRESSION));
-			if (transientValues.isValueTransient(semanticObject, PascalPackage.Literals.WHILE_STATEMENT__STATEMENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, PascalPackage.Literals.WHILE_STATEMENT__STATEMENT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getWhile_statementAccess().getExpressionExpressionParserRuleCall_1_0(), semanticObject.getExpression());
-		feeder.accept(grammarAccess.getWhile_statementAccess().getStatementStatementParserRuleCall_3_0(), semanticObject.getStatement());
 		feeder.finish();
 	}
 	

@@ -13,9 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.pascal.repetitive_statement#getWhileStmt <em>While Stmt</em>}</li>
  *   <li>{@link org.xtext.pascal.repetitive_statement#getRepeatStmt <em>Repeat Stmt</em>}</li>
- *   <li>{@link org.xtext.pascal.repetitive_statement#getForStmt <em>For Stmt</em>}</li>
  * </ul>
  * </p>
  *
@@ -25,32 +23,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface repetitive_statement extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>While Stmt</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>While Stmt</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>While Stmt</em>' containment reference.
-   * @see #setWhileStmt(while_statement)
-   * @see org.xtext.pascal.PascalPackage#getrepetitive_statement_WhileStmt()
-   * @model containment="true"
-   * @generated
-   */
-  while_statement getWhileStmt();
-
-  /**
-   * Sets the value of the '{@link org.xtext.pascal.repetitive_statement#getWhileStmt <em>While Stmt</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>While Stmt</em>' containment reference.
-   * @see #getWhileStmt()
-   * @generated
-   */
-  void setWhileStmt(while_statement value);
-
   /**
    * Returns the value of the '<em><b>Repeat Stmt</b></em>' containment reference.
    * <!-- begin-user-doc -->
@@ -76,31 +48,5 @@ public interface repetitive_statement extends EObject
    * @generated
    */
   void setRepeatStmt(repeat_statement value);
-
-  /**
-   * Returns the value of the '<em><b>For Stmt</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>For Stmt</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>For Stmt</em>' containment reference.
-   * @see #setForStmt(for_statement)
-   * @see org.xtext.pascal.PascalPackage#getrepetitive_statement_ForStmt()
-   * @model containment="true"
-   * @generated
-   */
-  for_statement getForStmt();
-
-  /**
-   * Sets the value of the '{@link org.xtext.pascal.repetitive_statement#getForStmt <em>For Stmt</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>For Stmt</em>' containment reference.
-   * @see #getForStmt()
-   * @generated
-   */
-  void setForStmt(for_statement value);
 
 } // repetitive_statement

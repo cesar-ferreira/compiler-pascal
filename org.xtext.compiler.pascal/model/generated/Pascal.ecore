@@ -114,7 +114,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="number" eType="#//number"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="set" eType="#//set" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nil" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="boolean" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="function" eType="#//function_designator"
@@ -131,12 +130,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="any_number">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="integer" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="real" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="set">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="brackets" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expressions" eType="#//expression_list"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="function_designator">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -156,31 +149,13 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="repetitive_statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="whileStmt" eType="#//while_statement"
-        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repeatStmt" eType="#//repeat_statement"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forStmt" eType="#//for_statement"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="while_statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//expression"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="#//statement"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="repeat_statement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sequence" eType="#//statement_sequence"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//expression"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="for_statement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assignment" eType="#//assignment_statement"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="expression" eType="#//expression"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="statement" eType="#//statement"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="constant">
@@ -286,14 +261,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="identifiers" eType="#//variable_identifier_list"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//type" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="record_section">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="identifiers" eType="#//identifier_list"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//type" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="tag_field">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="set_type">
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//type" containment="true"/>

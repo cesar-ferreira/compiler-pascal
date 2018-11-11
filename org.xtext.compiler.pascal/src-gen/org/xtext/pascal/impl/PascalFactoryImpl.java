@@ -85,14 +85,11 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
       case PascalPackage.FACTOR: return createfactor();
       case PascalPackage.NUMBER: return createnumber();
       case PascalPackage.ANY_NUMBER: return createany_number();
-      case PascalPackage.SET: return createset();
       case PascalPackage.FUNCTION_DESIGNATOR: return createfunction_designator();
       case PascalPackage.STRUCTURED_STATEMENT: return createstructured_statement();
       case PascalPackage.COMPOUND_STATEMENT: return createcompound_statement();
       case PascalPackage.REPETITIVE_STATEMENT: return createrepetitive_statement();
-      case PascalPackage.WHILE_STATEMENT: return createwhile_statement();
       case PascalPackage.REPEAT_STATEMENT: return createrepeat_statement();
-      case PascalPackage.FOR_STATEMENT: return createfor_statement();
       case PascalPackage.CONSTANT: return createconstant();
       case PascalPackage.WITH_STATEMENT: return createwith_statement();
       case PascalPackage.GOTO_STATEMENT: return creategoto_statement();
@@ -112,8 +109,6 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
       case PascalPackage.INDEX_TYPE: return createindex_type();
       case PascalPackage.VARIABLE_IDENTIFIER_LIST: return createvariable_identifier_list();
       case PascalPackage.VARIABLE_SECTION: return createvariable_section();
-      case PascalPackage.RECORD_SECTION: return createrecord_section();
-      case PascalPackage.TAG_FIELD: return createtag_field();
       case PascalPackage.SET_TYPE: return createset_type();
       case PascalPackage.FILE_TYPE: return createfile_type();
       case PascalPackage.POINTER_TYPE: return createpointer_type();
@@ -360,17 +355,6 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public set createset()
-  {
-    setImpl set = new setImpl();
-    return set;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public function_designator createfunction_designator()
   {
     function_designatorImpl function_designator = new function_designatorImpl();
@@ -415,32 +399,10 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public while_statement createwhile_statement()
-  {
-    while_statementImpl while_statement = new while_statementImpl();
-    return while_statement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public repeat_statement createrepeat_statement()
   {
     repeat_statementImpl repeat_statement = new repeat_statementImpl();
     return repeat_statement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public for_statement createfor_statement()
-  {
-    for_statementImpl for_statement = new for_statementImpl();
-    return for_statement;
   }
 
   /**
@@ -650,28 +612,6 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
   {
     variable_sectionImpl variable_section = new variable_sectionImpl();
     return variable_section;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public record_section createrecord_section()
-  {
-    record_sectionImpl record_section = new record_sectionImpl();
-    return record_section;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public tag_field createtag_field()
-  {
-    tag_fieldImpl tag_field = new tag_fieldImpl();
-    return tag_field;
   }
 
   /**
