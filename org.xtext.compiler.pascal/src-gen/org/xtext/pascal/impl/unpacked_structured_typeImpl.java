@@ -16,7 +16,6 @@ import org.xtext.pascal.PascalPackage;
 import org.xtext.pascal.array_type;
 import org.xtext.pascal.dynamic_array_type;
 import org.xtext.pascal.file_type;
-import org.xtext.pascal.record_type;
 import org.xtext.pascal.set_type;
 import org.xtext.pascal.unpacked_structured_type;
 
@@ -29,7 +28,6 @@ import org.xtext.pascal.unpacked_structured_type;
  * <ul>
  *   <li>{@link org.xtext.pascal.impl.unpacked_structured_typeImpl#getArray <em>Array</em>}</li>
  *   <li>{@link org.xtext.pascal.impl.unpacked_structured_typeImpl#getDynamic <em>Dynamic</em>}</li>
- *   <li>{@link org.xtext.pascal.impl.unpacked_structured_typeImpl#getRecord <em>Record</em>}</li>
  *   <li>{@link org.xtext.pascal.impl.unpacked_structured_typeImpl#getSet <em>Set</em>}</li>
  *   <li>{@link org.xtext.pascal.impl.unpacked_structured_typeImpl#getFile <em>File</em>}</li>
  * </ul>
@@ -58,16 +56,6 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
    * @ordered
    */
   protected dynamic_array_type dynamic;
-
-  /**
-   * The cached value of the '{@link #getRecord() <em>Record</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRecord()
-   * @generated
-   * @ordered
-   */
-  protected record_type record;
 
   /**
    * The cached value of the '{@link #getSet() <em>Set</em>}' containment reference.
@@ -211,54 +199,6 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
    * <!-- end-user-doc -->
    * @generated
    */
-  public record_type getRecord()
-  {
-    return record;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetRecord(record_type newRecord, NotificationChain msgs)
-  {
-    record_type oldRecord = record;
-    record = newRecord;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD, oldRecord, newRecord);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setRecord(record_type newRecord)
-  {
-    if (newRecord != record)
-    {
-      NotificationChain msgs = null;
-      if (record != null)
-        msgs = ((InternalEObject)record).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD, null, msgs);
-      if (newRecord != null)
-        msgs = ((InternalEObject)newRecord).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD, null, msgs);
-      msgs = basicSetRecord(newRecord, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD, newRecord, newRecord));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public set_type getSet()
   {
     return set;
@@ -364,8 +304,6 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
         return basicSetArray(null, msgs);
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__DYNAMIC:
         return basicSetDynamic(null, msgs);
-      case PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD:
-        return basicSetRecord(null, msgs);
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__SET:
         return basicSetSet(null, msgs);
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__FILE:
@@ -388,8 +326,6 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
         return getArray();
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__DYNAMIC:
         return getDynamic();
-      case PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD:
-        return getRecord();
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__SET:
         return getSet();
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__FILE:
@@ -413,9 +349,6 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
         return;
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__DYNAMIC:
         setDynamic((dynamic_array_type)newValue);
-        return;
-      case PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD:
-        setRecord((record_type)newValue);
         return;
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__SET:
         setSet((set_type)newValue);
@@ -443,9 +376,6 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__DYNAMIC:
         setDynamic((dynamic_array_type)null);
         return;
-      case PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD:
-        setRecord((record_type)null);
-        return;
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__SET:
         setSet((set_type)null);
         return;
@@ -470,8 +400,6 @@ public class unpacked_structured_typeImpl extends MinimalEObjectImpl.Container i
         return array != null;
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__DYNAMIC:
         return dynamic != null;
-      case PascalPackage.UNPACKED_STRUCTURED_TYPE__RECORD:
-        return record != null;
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__SET:
         return set != null;
       case PascalPackage.UNPACKED_STRUCTURED_TYPE__FILE:

@@ -93,11 +93,6 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
       case PascalPackage.WHILE_STATEMENT: return createwhile_statement();
       case PascalPackage.REPEAT_STATEMENT: return createrepeat_statement();
       case PascalPackage.FOR_STATEMENT: return createfor_statement();
-      case PascalPackage.CONDITIONAL_STATEMENT: return createconditional_statement();
-      case PascalPackage.IF_STATEMENT: return createif_statement();
-      case PascalPackage.CASE_STATEMENT: return createcase_statement();
-      case PascalPackage.CASE_LIMB: return createcase_limb();
-      case PascalPackage.CASE_LABEL_LIST: return createcase_label_list();
       case PascalPackage.CONSTANT: return createconstant();
       case PascalPackage.WITH_STATEMENT: return createwith_statement();
       case PascalPackage.GOTO_STATEMENT: return creategoto_statement();
@@ -115,15 +110,10 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
       case PascalPackage.ARRAY_TYPE: return createarray_type();
       case PascalPackage.DYNAMIC_ARRAY_TYPE: return createdynamic_array_type();
       case PascalPackage.INDEX_TYPE: return createindex_type();
-      case PascalPackage.RECORD_TYPE: return createrecord_type();
-      case PascalPackage.FIELD_LIST: return createfield_list();
-      case PascalPackage.FIXED_PART: return createfixed_part();
       case PascalPackage.VARIABLE_IDENTIFIER_LIST: return createvariable_identifier_list();
       case PascalPackage.VARIABLE_SECTION: return createvariable_section();
       case PascalPackage.RECORD_SECTION: return createrecord_section();
-      case PascalPackage.VARIANT_PART: return createvariant_part();
       case PascalPackage.TAG_FIELD: return createtag_field();
-      case PascalPackage.VARIANT: return createvariant();
       case PascalPackage.SET_TYPE: return createset_type();
       case PascalPackage.FILE_TYPE: return createfile_type();
       case PascalPackage.POINTER_TYPE: return createpointer_type();
@@ -458,61 +448,6 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public conditional_statement createconditional_statement()
-  {
-    conditional_statementImpl conditional_statement = new conditional_statementImpl();
-    return conditional_statement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public if_statement createif_statement()
-  {
-    if_statementImpl if_statement = new if_statementImpl();
-    return if_statement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public case_statement createcase_statement()
-  {
-    case_statementImpl case_statement = new case_statementImpl();
-    return case_statement;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public case_limb createcase_limb()
-  {
-    case_limbImpl case_limb = new case_limbImpl();
-    return case_limb;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public case_label_list createcase_label_list()
-  {
-    case_label_listImpl case_label_list = new case_label_listImpl();
-    return case_label_list;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public constant createconstant()
   {
     constantImpl constant = new constantImpl();
@@ -700,39 +635,6 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public record_type createrecord_type()
-  {
-    record_typeImpl record_type = new record_typeImpl();
-    return record_type;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public field_list createfield_list()
-  {
-    field_listImpl field_list = new field_listImpl();
-    return field_list;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public fixed_part createfixed_part()
-  {
-    fixed_partImpl fixed_part = new fixed_partImpl();
-    return fixed_part;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public variable_identifier_list createvariable_identifier_list()
   {
     variable_identifier_listImpl variable_identifier_list = new variable_identifier_listImpl();
@@ -766,32 +668,10 @@ public class PascalFactoryImpl extends EFactoryImpl implements PascalFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public variant_part createvariant_part()
-  {
-    variant_partImpl variant_part = new variant_partImpl();
-    return variant_part;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public tag_field createtag_field()
   {
     tag_fieldImpl tag_field = new tag_fieldImpl();
     return tag_field;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public variant createvariant()
-  {
-    variantImpl variant = new variantImpl();
-    return variant;
   }
 
   /**

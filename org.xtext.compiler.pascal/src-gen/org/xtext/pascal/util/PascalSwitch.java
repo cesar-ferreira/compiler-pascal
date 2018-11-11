@@ -269,41 +269,6 @@ public class PascalSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PascalPackage.CONDITIONAL_STATEMENT:
-      {
-        conditional_statement conditional_statement = (conditional_statement)theEObject;
-        T result = caseconditional_statement(conditional_statement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.IF_STATEMENT:
-      {
-        if_statement if_statement = (if_statement)theEObject;
-        T result = caseif_statement(if_statement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.CASE_STATEMENT:
-      {
-        case_statement case_statement = (case_statement)theEObject;
-        T result = casecase_statement(case_statement);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.CASE_LIMB:
-      {
-        case_limb case_limb = (case_limb)theEObject;
-        T result = casecase_limb(case_limb);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.CASE_LABEL_LIST:
-      {
-        case_label_list case_label_list = (case_label_list)theEObject;
-        T result = casecase_label_list(case_label_list);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case PascalPackage.CONSTANT:
       {
         constant constant = (constant)theEObject;
@@ -423,27 +388,6 @@ public class PascalSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PascalPackage.RECORD_TYPE:
-      {
-        record_type record_type = (record_type)theEObject;
-        T result = caserecord_type(record_type);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.FIELD_LIST:
-      {
-        field_list field_list = (field_list)theEObject;
-        T result = casefield_list(field_list);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.FIXED_PART:
-      {
-        fixed_part fixed_part = (fixed_part)theEObject;
-        T result = casefixed_part(fixed_part);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case PascalPackage.VARIABLE_IDENTIFIER_LIST:
       {
         variable_identifier_list variable_identifier_list = (variable_identifier_list)theEObject;
@@ -465,24 +409,10 @@ public class PascalSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case PascalPackage.VARIANT_PART:
-      {
-        variant_part variant_part = (variant_part)theEObject;
-        T result = casevariant_part(variant_part);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case PascalPackage.TAG_FIELD:
       {
         tag_field tag_field = (tag_field)theEObject;
         T result = casetag_field(tag_field);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case PascalPackage.VARIANT:
-      {
-        variant variant = (variant)theEObject;
-        T result = casevariant(variant);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1052,86 +982,6 @@ public class PascalSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>conditional statement</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>conditional statement</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseconditional_statement(conditional_statement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>if statement</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>if statement</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseif_statement(if_statement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>case statement</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>case statement</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casecase_statement(case_statement object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>case limb</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>case limb</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casecase_limb(case_limb object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>case label list</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>case label list</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casecase_label_list(case_label_list object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>constant</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1404,54 +1254,6 @@ public class PascalSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>record type</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>record type</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caserecord_type(record_type object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>field list</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>field list</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casefield_list(field_list object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>fixed part</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>fixed part</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casefixed_part(fixed_part object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>variable identifier list</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1500,22 +1302,6 @@ public class PascalSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>variant part</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>variant part</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casevariant_part(variant_part object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>tag field</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1527,22 +1313,6 @@ public class PascalSwitch<T> extends Switch<T>
    * @generated
    */
   public T casetag_field(tag_field object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>variant</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>variant</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casevariant(variant object)
   {
     return null;
   }

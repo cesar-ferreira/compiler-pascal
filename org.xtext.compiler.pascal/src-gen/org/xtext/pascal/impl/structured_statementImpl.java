@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.pascal.PascalPackage;
 import org.xtext.pascal.compound_statement;
-import org.xtext.pascal.conditional_statement;
 import org.xtext.pascal.repetitive_statement;
 import org.xtext.pascal.structured_statement;
 import org.xtext.pascal.with_statement;
@@ -28,7 +27,6 @@ import org.xtext.pascal.with_statement;
  * <ul>
  *   <li>{@link org.xtext.pascal.impl.structured_statementImpl#getCompound <em>Compound</em>}</li>
  *   <li>{@link org.xtext.pascal.impl.structured_statementImpl#getRepetitive <em>Repetitive</em>}</li>
- *   <li>{@link org.xtext.pascal.impl.structured_statementImpl#getConditional <em>Conditional</em>}</li>
  *   <li>{@link org.xtext.pascal.impl.structured_statementImpl#getWithStmt <em>With Stmt</em>}</li>
  * </ul>
  * </p>
@@ -56,16 +54,6 @@ public class structured_statementImpl extends MinimalEObjectImpl.Container imple
    * @ordered
    */
   protected repetitive_statement repetitive;
-
-  /**
-   * The cached value of the '{@link #getConditional() <em>Conditional</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getConditional()
-   * @generated
-   * @ordered
-   */
-  protected conditional_statement conditional;
 
   /**
    * The cached value of the '{@link #getWithStmt() <em>With Stmt</em>}' containment reference.
@@ -199,54 +187,6 @@ public class structured_statementImpl extends MinimalEObjectImpl.Container imple
    * <!-- end-user-doc -->
    * @generated
    */
-  public conditional_statement getConditional()
-  {
-    return conditional;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetConditional(conditional_statement newConditional, NotificationChain msgs)
-  {
-    conditional_statement oldConditional = conditional;
-    conditional = newConditional;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL, oldConditional, newConditional);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setConditional(conditional_statement newConditional)
-  {
-    if (newConditional != conditional)
-    {
-      NotificationChain msgs = null;
-      if (conditional != null)
-        msgs = ((InternalEObject)conditional).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL, null, msgs);
-      if (newConditional != null)
-        msgs = ((InternalEObject)newConditional).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL, null, msgs);
-      msgs = basicSetConditional(newConditional, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL, newConditional, newConditional));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public with_statement getWithStmt()
   {
     return withStmt;
@@ -304,8 +244,6 @@ public class structured_statementImpl extends MinimalEObjectImpl.Container imple
         return basicSetCompound(null, msgs);
       case PascalPackage.STRUCTURED_STATEMENT__REPETITIVE:
         return basicSetRepetitive(null, msgs);
-      case PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL:
-        return basicSetConditional(null, msgs);
       case PascalPackage.STRUCTURED_STATEMENT__WITH_STMT:
         return basicSetWithStmt(null, msgs);
     }
@@ -326,8 +264,6 @@ public class structured_statementImpl extends MinimalEObjectImpl.Container imple
         return getCompound();
       case PascalPackage.STRUCTURED_STATEMENT__REPETITIVE:
         return getRepetitive();
-      case PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL:
-        return getConditional();
       case PascalPackage.STRUCTURED_STATEMENT__WITH_STMT:
         return getWithStmt();
     }
@@ -349,9 +285,6 @@ public class structured_statementImpl extends MinimalEObjectImpl.Container imple
         return;
       case PascalPackage.STRUCTURED_STATEMENT__REPETITIVE:
         setRepetitive((repetitive_statement)newValue);
-        return;
-      case PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL:
-        setConditional((conditional_statement)newValue);
         return;
       case PascalPackage.STRUCTURED_STATEMENT__WITH_STMT:
         setWithStmt((with_statement)newValue);
@@ -376,9 +309,6 @@ public class structured_statementImpl extends MinimalEObjectImpl.Container imple
       case PascalPackage.STRUCTURED_STATEMENT__REPETITIVE:
         setRepetitive((repetitive_statement)null);
         return;
-      case PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL:
-        setConditional((conditional_statement)null);
-        return;
       case PascalPackage.STRUCTURED_STATEMENT__WITH_STMT:
         setWithStmt((with_statement)null);
         return;
@@ -400,8 +330,6 @@ public class structured_statementImpl extends MinimalEObjectImpl.Container imple
         return compound != null;
       case PascalPackage.STRUCTURED_STATEMENT__REPETITIVE:
         return repetitive != null;
-      case PascalPackage.STRUCTURED_STATEMENT__CONDITIONAL:
-        return conditional != null;
       case PascalPackage.STRUCTURED_STATEMENT__WITH_STMT:
         return withStmt != null;
     }

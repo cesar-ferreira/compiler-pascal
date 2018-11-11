@@ -19,11 +19,7 @@ import org.xtext.pascal.array_type;
 import org.xtext.pascal.assignment_statement;
 import org.xtext.pascal.block;
 import org.xtext.pascal.bound_specification;
-import org.xtext.pascal.case_label_list;
-import org.xtext.pascal.case_limb;
-import org.xtext.pascal.case_statement;
 import org.xtext.pascal.compound_statement;
-import org.xtext.pascal.conditional_statement;
 import org.xtext.pascal.conformant_array_schema;
 import org.xtext.pascal.constant;
 import org.xtext.pascal.constant_definition;
@@ -33,16 +29,13 @@ import org.xtext.pascal.enumerated_type;
 import org.xtext.pascal.expression;
 import org.xtext.pascal.expression_list;
 import org.xtext.pascal.factor;
-import org.xtext.pascal.field_list;
 import org.xtext.pascal.file_type;
-import org.xtext.pascal.fixed_part;
 import org.xtext.pascal.for_statement;
 import org.xtext.pascal.formal_parameter_list;
 import org.xtext.pascal.formal_parameter_section;
 import org.xtext.pascal.function_designator;
 import org.xtext.pascal.goto_statement;
 import org.xtext.pascal.identifier_list;
-import org.xtext.pascal.if_statement;
 import org.xtext.pascal.index_type;
 import org.xtext.pascal.label;
 import org.xtext.pascal.label_declaration_part;
@@ -55,7 +48,6 @@ import org.xtext.pascal.procedure_and_function_declaration_part;
 import org.xtext.pascal.program;
 import org.xtext.pascal.program_heading_block;
 import org.xtext.pascal.record_section;
-import org.xtext.pascal.record_type;
 import org.xtext.pascal.repeat_statement;
 import org.xtext.pascal.repetitive_statement;
 import org.xtext.pascal.set;
@@ -83,8 +75,6 @@ import org.xtext.pascal.variable_declaration_part;
 import org.xtext.pascal.variable_identifier_list;
 import org.xtext.pascal.variable_parameter_section;
 import org.xtext.pascal.variable_section;
-import org.xtext.pascal.variant;
-import org.xtext.pascal.variant_part;
 import org.xtext.pascal.while_statement;
 import org.xtext.pascal.with_statement;
 
@@ -297,41 +287,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass conditional_statementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass if_statementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass case_statementEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass case_limbEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass case_label_listEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass constantEClass = null;
 
   /**
@@ -451,27 +406,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass record_typeEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass field_listEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass fixed_partEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass variable_identifier_listEClass = null;
 
   /**
@@ -493,21 +427,7 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass variant_partEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass tag_fieldEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass variantEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1499,19 +1419,9 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getstructured_statement_Conditional()
-  {
-    return (EReference)structured_statementEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getstructured_statement_WithStmt()
   {
-    return (EReference)structured_statementEClass.getEStructuralFeatures().get(3);
+    return (EReference)structured_statementEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1672,156 +1582,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
   public EReference getfor_statement_Statement()
   {
     return (EReference)for_statementEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getconditional_statement()
-  {
-    return conditional_statementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getconditional_statement_IfStmt()
-  {
-    return (EReference)conditional_statementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getconditional_statement_CaseStmt()
-  {
-    return (EReference)conditional_statementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getif_statement()
-  {
-    return if_statementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getif_statement_Expression()
-  {
-    return (EReference)if_statementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getif_statement_IfStatement()
-  {
-    return (EReference)if_statementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getif_statement_ElseStatement()
-  {
-    return (EReference)if_statementEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getcase_statement()
-  {
-    return case_statementEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getcase_statement_Expression()
-  {
-    return (EReference)case_statementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getcase_statement_Cases()
-  {
-    return (EReference)case_statementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getcase_limb()
-  {
-    return case_limbEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getcase_limb_Cases()
-  {
-    return (EReference)case_limbEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getcase_limb_Statement()
-  {
-    return (EReference)case_limbEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getcase_label_list()
-  {
-    return case_label_listEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getcase_label_list_Constants()
-  {
-    return (EReference)case_label_listEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2279,7 +2039,7 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getunpacked_structured_type_Record()
+  public EReference getunpacked_structured_type_Set()
   {
     return (EReference)unpacked_structured_typeEClass.getEStructuralFeatures().get(2);
   }
@@ -2289,19 +2049,9 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getunpacked_structured_type_Set()
-  {
-    return (EReference)unpacked_structured_typeEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getunpacked_structured_type_File()
   {
-    return (EReference)unpacked_structured_typeEClass.getEStructuralFeatures().get(4);
+    return (EReference)unpacked_structured_typeEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2372,96 +2122,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
   public EReference getindex_type_Type()
   {
     return (EReference)index_typeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getrecord_type()
-  {
-    return record_typeEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getrecord_type_RecordKeyword()
-  {
-    return (EAttribute)record_typeEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getrecord_type_Fields()
-  {
-    return (EReference)record_typeEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getrecord_type_EndKeyword()
-  {
-    return (EAttribute)record_typeEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getfield_list()
-  {
-    return field_listEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getfield_list_Fixed()
-  {
-    return (EReference)field_listEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getfield_list_Variants()
-  {
-    return (EReference)field_listEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getfixed_part()
-  {
-    return fixed_partEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getfixed_part_Sections()
-  {
-    return (EReference)fixed_partEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2549,46 +2209,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getvariant_part()
-  {
-    return variant_partEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getvariant_part_Tag()
-  {
-    return (EReference)variant_partEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getvariant_part_Name()
-  {
-    return (EAttribute)variant_partEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getvariant_part_Variants()
-  {
-    return (EReference)variant_partEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass gettag_field()
   {
     return tag_fieldEClass;
@@ -2602,36 +2222,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
   public EAttribute gettag_field_Name()
   {
     return (EAttribute)tag_fieldEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getvariant()
-  {
-    return variantEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getvariant_Labels()
-  {
-    return (EReference)variantEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getvariant_Fields()
-  {
-    return (EReference)variantEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -3247,7 +2837,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     structured_statementEClass = createEClass(STRUCTURED_STATEMENT);
     createEReference(structured_statementEClass, STRUCTURED_STATEMENT__COMPOUND);
     createEReference(structured_statementEClass, STRUCTURED_STATEMENT__REPETITIVE);
-    createEReference(structured_statementEClass, STRUCTURED_STATEMENT__CONDITIONAL);
     createEReference(structured_statementEClass, STRUCTURED_STATEMENT__WITH_STMT);
 
     compound_statementEClass = createEClass(COMPOUND_STATEMENT);
@@ -3270,26 +2859,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     createEReference(for_statementEClass, FOR_STATEMENT__ASSIGNMENT);
     createEReference(for_statementEClass, FOR_STATEMENT__EXPRESSION);
     createEReference(for_statementEClass, FOR_STATEMENT__STATEMENT);
-
-    conditional_statementEClass = createEClass(CONDITIONAL_STATEMENT);
-    createEReference(conditional_statementEClass, CONDITIONAL_STATEMENT__IF_STMT);
-    createEReference(conditional_statementEClass, CONDITIONAL_STATEMENT__CASE_STMT);
-
-    if_statementEClass = createEClass(IF_STATEMENT);
-    createEReference(if_statementEClass, IF_STATEMENT__EXPRESSION);
-    createEReference(if_statementEClass, IF_STATEMENT__IF_STATEMENT);
-    createEReference(if_statementEClass, IF_STATEMENT__ELSE_STATEMENT);
-
-    case_statementEClass = createEClass(CASE_STATEMENT);
-    createEReference(case_statementEClass, CASE_STATEMENT__EXPRESSION);
-    createEReference(case_statementEClass, CASE_STATEMENT__CASES);
-
-    case_limbEClass = createEClass(CASE_LIMB);
-    createEReference(case_limbEClass, CASE_LIMB__CASES);
-    createEReference(case_limbEClass, CASE_LIMB__STATEMENT);
-
-    case_label_listEClass = createEClass(CASE_LABEL_LIST);
-    createEReference(case_label_listEClass, CASE_LABEL_LIST__CONSTANTS);
 
     constantEClass = createEClass(CONSTANT);
     createEAttribute(constantEClass, CONSTANT__OPTERATOR);
@@ -3349,7 +2918,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     unpacked_structured_typeEClass = createEClass(UNPACKED_STRUCTURED_TYPE);
     createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__ARRAY);
     createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__DYNAMIC);
-    createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__RECORD);
     createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__SET);
     createEReference(unpacked_structured_typeEClass, UNPACKED_STRUCTURED_TYPE__FILE);
 
@@ -3363,18 +2931,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     index_typeEClass = createEClass(INDEX_TYPE);
     createEReference(index_typeEClass, INDEX_TYPE__TYPE);
 
-    record_typeEClass = createEClass(RECORD_TYPE);
-    createEAttribute(record_typeEClass, RECORD_TYPE__RECORD_KEYWORD);
-    createEReference(record_typeEClass, RECORD_TYPE__FIELDS);
-    createEAttribute(record_typeEClass, RECORD_TYPE__END_KEYWORD);
-
-    field_listEClass = createEClass(FIELD_LIST);
-    createEReference(field_listEClass, FIELD_LIST__FIXED);
-    createEReference(field_listEClass, FIELD_LIST__VARIANTS);
-
-    fixed_partEClass = createEClass(FIXED_PART);
-    createEReference(fixed_partEClass, FIXED_PART__SECTIONS);
-
     variable_identifier_listEClass = createEClass(VARIABLE_IDENTIFIER_LIST);
     createEAttribute(variable_identifier_listEClass, VARIABLE_IDENTIFIER_LIST__NAMES);
 
@@ -3386,17 +2942,8 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     createEReference(record_sectionEClass, RECORD_SECTION__IDENTIFIERS);
     createEReference(record_sectionEClass, RECORD_SECTION__TYPE);
 
-    variant_partEClass = createEClass(VARIANT_PART);
-    createEReference(variant_partEClass, VARIANT_PART__TAG);
-    createEAttribute(variant_partEClass, VARIANT_PART__NAME);
-    createEReference(variant_partEClass, VARIANT_PART__VARIANTS);
-
     tag_fieldEClass = createEClass(TAG_FIELD);
     createEAttribute(tag_fieldEClass, TAG_FIELD__NAME);
-
-    variantEClass = createEClass(VARIANT);
-    createEReference(variantEClass, VARIANT__LABELS);
-    createEReference(variantEClass, VARIANT__FIELDS);
 
     set_typeEClass = createEClass(SET_TYPE);
     createEReference(set_typeEClass, SET_TYPE__TYPE);
@@ -3598,7 +3145,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     initEClass(structured_statementEClass, structured_statement.class, "structured_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getstructured_statement_Compound(), this.getcompound_statement(), null, "compound", null, 0, 1, structured_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getstructured_statement_Repetitive(), this.getrepetitive_statement(), null, "repetitive", null, 0, 1, structured_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getstructured_statement_Conditional(), this.getconditional_statement(), null, "conditional", null, 0, 1, structured_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getstructured_statement_WithStmt(), this.getwith_statement(), null, "withStmt", null, 0, 1, structured_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(compound_statementEClass, compound_statement.class, "compound_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3621,26 +3167,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     initEReference(getfor_statement_Assignment(), this.getassignment_statement(), null, "assignment", null, 0, 1, for_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getfor_statement_Expression(), this.getexpression(), null, "expression", null, 0, 1, for_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getfor_statement_Statement(), this.getstatement(), null, "statement", null, 0, 1, for_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(conditional_statementEClass, conditional_statement.class, "conditional_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getconditional_statement_IfStmt(), this.getif_statement(), null, "ifStmt", null, 0, 1, conditional_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getconditional_statement_CaseStmt(), this.getcase_statement(), null, "caseStmt", null, 0, 1, conditional_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(if_statementEClass, if_statement.class, "if_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getif_statement_Expression(), this.getexpression(), null, "expression", null, 0, 1, if_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getif_statement_IfStatement(), this.getstatement(), null, "ifStatement", null, 0, 1, if_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getif_statement_ElseStatement(), this.getstatement(), null, "elseStatement", null, 0, 1, if_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(case_statementEClass, case_statement.class, "case_statement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getcase_statement_Expression(), this.getexpression(), null, "expression", null, 0, 1, case_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcase_statement_Cases(), this.getcase_limb(), null, "cases", null, 0, -1, case_statement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(case_limbEClass, case_limb.class, "case_limb", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getcase_limb_Cases(), this.getcase_label_list(), null, "cases", null, 0, 1, case_limb.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getcase_limb_Statement(), this.getstatement(), null, "statement", null, 0, 1, case_limb.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(case_label_listEClass, case_label_list.class, "case_label_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getcase_label_list_Constants(), this.getconstant(), null, "constants", null, 0, -1, case_label_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantEClass, constant.class, "constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getconstant_Opterator(), ecorePackage.getEString(), "opterator", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3700,7 +3226,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     initEClass(unpacked_structured_typeEClass, unpacked_structured_type.class, "unpacked_structured_type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getunpacked_structured_type_Array(), this.getarray_type(), null, "array", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getunpacked_structured_type_Dynamic(), this.getdynamic_array_type(), null, "dynamic", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getunpacked_structured_type_Record(), this.getrecord_type(), null, "record", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getunpacked_structured_type_Set(), this.getset_type(), null, "set", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getunpacked_structured_type_File(), this.getfile_type(), null, "file", null, 0, 1, unpacked_structured_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3714,18 +3239,6 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     initEClass(index_typeEClass, index_type.class, "index_type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getindex_type_Type(), this.getsimple_type(), null, "type", null, 0, 1, index_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(record_typeEClass, record_type.class, "record_type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getrecord_type_RecordKeyword(), ecorePackage.getEString(), "recordKeyword", null, 0, 1, record_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getrecord_type_Fields(), this.getfield_list(), null, "fields", null, 0, 1, record_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getrecord_type_EndKeyword(), ecorePackage.getEString(), "endKeyword", null, 0, 1, record_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(field_listEClass, field_list.class, "field_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getfield_list_Fixed(), this.getfixed_part(), null, "fixed", null, 0, 1, field_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getfield_list_Variants(), this.getvariant_part(), null, "variants", null, 0, -1, field_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(fixed_partEClass, fixed_part.class, "fixed_part", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getfixed_part_Sections(), this.getrecord_section(), null, "sections", null, 0, -1, fixed_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(variable_identifier_listEClass, variable_identifier_list.class, "variable_identifier_list", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getvariable_identifier_list_Names(), ecorePackage.getEString(), "names", null, 0, -1, variable_identifier_list.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3737,17 +3250,8 @@ public class PascalPackageImpl extends EPackageImpl implements PascalPackage
     initEReference(getrecord_section_Identifiers(), this.getidentifier_list(), null, "identifiers", null, 0, 1, record_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getrecord_section_Type(), this.gettype(), null, "type", null, 0, 1, record_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(variant_partEClass, variant_part.class, "variant_part", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getvariant_part_Tag(), this.gettag_field(), null, "tag", null, 0, 1, variant_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getvariant_part_Name(), ecorePackage.getEString(), "name", null, 0, 1, variant_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getvariant_part_Variants(), this.getvariant(), null, "variants", null, 0, -1, variant_part.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(tag_fieldEClass, tag_field.class, "tag_field", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(gettag_field_Name(), ecorePackage.getEString(), "name", null, 0, 1, tag_field.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(variantEClass, variant.class, "variant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getvariant_Labels(), this.getcase_label_list(), null, "labels", null, 0, 1, variant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getvariant_Fields(), this.getfield_list(), null, "fields", null, 0, 1, variant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(set_typeEClass, set_type.class, "set_type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getset_type_Type(), this.gettype(), null, "type", null, 0, 1, set_type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

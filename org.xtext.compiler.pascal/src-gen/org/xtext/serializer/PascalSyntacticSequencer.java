@@ -21,15 +21,11 @@ import org.xtext.services.PascalGrammarAccess;
 public class PascalSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected PascalGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_case_statement_SemicolonKeyword_5_q;
-	protected AbstractElementAlias match_field_list_SemicolonKeyword_1_q;
 	protected AbstractElementAlias match_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (PascalGrammarAccess) access;
-		match_case_statement_SemicolonKeyword_5_q = new TokenAlias(false, true, grammarAccess.getCase_statementAccess().getSemicolonKeyword_5());
-		match_field_list_SemicolonKeyword_1_q = new TokenAlias(false, true, grammarAccess.getField_listAccess().getSemicolonKeyword_1());
 		match_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getFor_statementAccess().getDowntoKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getFor_statementAccess().getToKeyword_2_0()));
 	}
 	
@@ -45,39 +41,12 @@ public class PascalSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_case_statement_SemicolonKeyword_5_q.equals(syntax))
-				emit_case_statement_SemicolonKeyword_5_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_field_list_SemicolonKeyword_1_q.equals(syntax))
-				emit_field_list_SemicolonKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0.equals(syntax))
+			if (match_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0.equals(syntax))
 				emit_for_statement_DowntoKeyword_2_1_or_ToKeyword_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     ';'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     cases+=case_limb (ambiguity) 'end' (rule end)
-	 */
-	protected void emit_case_statement_SemicolonKeyword_5_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ';'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     fixed=fixed_part (ambiguity) (rule end)
-	 *     variants+=variant_part (ambiguity) (rule end)
-	 */
-	protected void emit_field_list_SemicolonKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     'to' | 'downto'

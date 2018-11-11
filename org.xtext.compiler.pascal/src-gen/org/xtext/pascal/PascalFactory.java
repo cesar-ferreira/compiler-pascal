@@ -276,51 +276,6 @@ public interface PascalFactory extends EFactory
   for_statement createfor_statement();
 
   /**
-   * Returns a new object of class '<em>conditional statement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>conditional statement</em>'.
-   * @generated
-   */
-  conditional_statement createconditional_statement();
-
-  /**
-   * Returns a new object of class '<em>if statement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>if statement</em>'.
-   * @generated
-   */
-  if_statement createif_statement();
-
-  /**
-   * Returns a new object of class '<em>case statement</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>case statement</em>'.
-   * @generated
-   */
-  case_statement createcase_statement();
-
-  /**
-   * Returns a new object of class '<em>case limb</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>case limb</em>'.
-   * @generated
-   */
-  case_limb createcase_limb();
-
-  /**
-   * Returns a new object of class '<em>case label list</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>case label list</em>'.
-   * @generated
-   */
-  case_label_list createcase_label_list();
-
-  /**
    * Returns a new object of class '<em>constant</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -474,33 +429,6 @@ public interface PascalFactory extends EFactory
   index_type createindex_type();
 
   /**
-   * Returns a new object of class '<em>record type</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>record type</em>'.
-   * @generated
-   */
-  record_type createrecord_type();
-
-  /**
-   * Returns a new object of class '<em>field list</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>field list</em>'.
-   * @generated
-   */
-  field_list createfield_list();
-
-  /**
-   * Returns a new object of class '<em>fixed part</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>fixed part</em>'.
-   * @generated
-   */
-  fixed_part createfixed_part();
-
-  /**
    * Returns a new object of class '<em>variable identifier list</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -528,15 +456,6 @@ public interface PascalFactory extends EFactory
   record_section createrecord_section();
 
   /**
-   * Returns a new object of class '<em>variant part</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>variant part</em>'.
-   * @generated
-   */
-  variant_part createvariant_part();
-
-  /**
    * Returns a new object of class '<em>tag field</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -544,15 +463,6 @@ public interface PascalFactory extends EFactory
    * @generated
    */
   tag_field createtag_field();
-
-  /**
-   * Returns a new object of class '<em>variant</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>variant</em>'.
-   * @generated
-   */
-  variant createvariant();
 
   /**
    * Returns a new object of class '<em>set type</em>'.

@@ -15,7 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.pascal.structured_statement#getCompound <em>Compound</em>}</li>
  *   <li>{@link org.xtext.pascal.structured_statement#getRepetitive <em>Repetitive</em>}</li>
- *   <li>{@link org.xtext.pascal.structured_statement#getConditional <em>Conditional</em>}</li>
  *   <li>{@link org.xtext.pascal.structured_statement#getWithStmt <em>With Stmt</em>}</li>
  * </ul>
  * </p>
@@ -77,32 +76,6 @@ public interface structured_statement extends EObject
    * @generated
    */
   void setRepetitive(repetitive_statement value);
-
-  /**
-   * Returns the value of the '<em><b>Conditional</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Conditional</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Conditional</em>' containment reference.
-   * @see #setConditional(conditional_statement)
-   * @see org.xtext.pascal.PascalPackage#getstructured_statement_Conditional()
-   * @model containment="true"
-   * @generated
-   */
-  conditional_statement getConditional();
-
-  /**
-   * Sets the value of the '{@link org.xtext.pascal.structured_statement#getConditional <em>Conditional</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Conditional</em>' containment reference.
-   * @see #getConditional()
-   * @generated
-   */
-  void setConditional(conditional_statement value);
 
   /**
    * Returns the value of the '<em><b>With Stmt</b></em>' containment reference.
